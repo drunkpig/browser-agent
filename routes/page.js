@@ -15,7 +15,7 @@ router.get('/:url', function (req, res, next) {
         logger.info("page.goto(%s)", url);
         const textContent = await page.evaluate(() => {
             var page_content =  document.querySelector('html').innerHTML;
-            logger.info("get url content ok");
+            //logger.info("get url content ok");
             return page_content;
         });
         logger.info("browser.close() begin");
